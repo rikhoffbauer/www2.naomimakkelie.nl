@@ -51,8 +51,10 @@ order: 5
 
   .page-content h1 {
     text-align: center;
-    margin-top: 50%;
-    transform: translateY(-50%);
+    top: 50%;
+    transform: translate(-50%);
+    position: fixed;
+    left: 50%;
   }
 </style>
 <h1 style="display: none">Email sent successfully</h1>
