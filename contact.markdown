@@ -22,6 +22,10 @@ order: 5
     padding: 1rem;
   }
 
+  .page-content form input:invalid, .page-content form textarea:invalid {
+    outline-color: red;
+  }
+
   .page-content form textarea {
     resize: vertical;
     min-height: 6rem;
@@ -59,9 +63,9 @@ order: 5
 </style>
 <h1 style="display: none">Email sent successfully</h1>
 <form action="/api/contact" method="POST" onsubmit="javascript:sendEmail(event)">
-  <input id="name" type="text" placeholder="Name" autofocus/>
-  <input id="email" type="email" placeholder="Email address"/>
-  <textarea id="message" placeholder="Message"></textarea>
+  <input id="name" type="text" placeholder="Name" autofocus required="required"/>
+  <input id="email" type="email" placeholder="Email address" required="required"/>
+  <textarea id="message" placeholder="Message" required="required" minlength="100"></textarea>
   <button type="submit">send</button>
 </form>
 <script>
@@ -89,7 +93,7 @@ async function sendEmail(event) {
     error = err;
   } finally {
     if (!res?.ok || error) {
-      //return alert(`ERROR sending email`);
+      return alert(`ERROR sending email`);
     }
 
     form.style.display = "none";
