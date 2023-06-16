@@ -5,4 +5,12 @@ permalink: /about
 order: 3
 ---
 
-ABOUT PAGE ...
+### Early years
+
+blablabla
+
+### Later in life
+
+oweifnoiewnfo
+
+> Inspirational quote here
