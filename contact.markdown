@@ -50,7 +50,7 @@ order: 5
   }
 </style>
 
-<form action="https://naomimakkelie.nl/api/contact" method="POST" onsubmit="javascript:sendEmail(event)">
+<form action="/api/contact" method="POST" onsubmit="javascript:sendEmail(event)">
   <input id="name" type="text" placeholder="Name"/>
   <input id="email" type="email" placeholder="Email address"/>
   <textarea id="message" placeholder="Message"></textarea>
