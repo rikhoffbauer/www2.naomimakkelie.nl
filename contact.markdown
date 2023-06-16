@@ -48,10 +48,16 @@ order: 5
     background: black;
     color: white;
   }
-</style>
 
+  .page-content h1 {
+    text-align: center;
+    margin-top: 50%;
+    transform: translateY(-50%);
+  }
+</style>
+<h1 style="display: none">Email sent successfully</h1>
 <form action="/api/contact" method="POST" onsubmit="javascript:sendEmail(event)">
-  <input id="name" type="text" placeholder="Name"/>
+  <input id="name" type="text" placeholder="Name" autofocus/>
   <input id="email" type="email" placeholder="Email address"/>
   <textarea id="message" placeholder="Message"></textarea>
   <button type="submit">send</button>
@@ -60,13 +66,14 @@ order: 5
 async function sendEmail(event) {
   event.preventDefault();
   const form = event.target;
+  const h1 = event.target.parentElement.querySelector(`h1`);
   const fields = Array.from(form.querySelectorAll(`input:not([type="button"])[id], textarea[id]`));
   const url = form.action;
 
   const body = fields.reduce((body, el) => ({...body, [el.id]: el.value}), {});
   console.log(body);
 
-  let res;
+  let res, error;
 
   try {
     res = await fetch(url, {
@@ -77,13 +84,14 @@ async function sendEmail(event) {
       body: JSON.stringify(body),
     });
   } catch (err) {
-    console.error(err);
+    error = err;
   } finally {
-    if (!res?.ok) {
-      return alert(`ERROR sending email`);
+    if (!res?.ok || error) {
+      //return alert(`ERROR sending email`);
     }
 
-    return alert(`Email sent successfully!`);
+    form.style.display = "none";
+    h1.style.display = "block";
   }
 }
 </script>
