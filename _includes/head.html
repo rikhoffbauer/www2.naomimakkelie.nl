@@ -2,10 +2,36 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="gsNAi5Q0eTYUGi482vOAZgGqCvtxT9JJcL9_IDTcM1g">
   {%- seo -%}
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
+  <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "ArtGallery",
+                "image": [
+                    "https://www2.naomimakkelie.nl/assets/img/shark.jpg"
+                ],
+                "@id": "https://naomimakkelie.nl/",
+                "name": "Naomi Makkelie",
+                "telephone": "+31634322133"
+            }
+  </script>
+  <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Naomi Makkelie",
+                "url": "https://www.naomimakkelie.nl",
+                "sameAs": [
+                    "https://www.facebook.com/naomi.mitsuko.5",
+                    "https://www.instagram.com/naomi.mitsuko.makkelie/",
+                    "https://plus.google.com/103218946204942325691"
+                ]
+            }
+  </script>
 </head>
