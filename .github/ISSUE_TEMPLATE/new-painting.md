@@ -1,4 +1,13 @@
 ---
+name: New Painting
+about: Add a new painting to the gallery
+title: 'Sweep: add a new painting'
+labels: enhancement, new painting, sweep
+assignees: ''
+
+---
+
+---
 title: New Painting Issue
 labels: 
   - new painting
