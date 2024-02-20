@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "Gemfile",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "_site" }
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/$1.html" }
+  ],
+  "github": {
+    "silent": true,
+    "autoAlias": true,
+    "deployments": true
+  }
+}
