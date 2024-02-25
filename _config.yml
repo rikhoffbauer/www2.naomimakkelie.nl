@@ -31,11 +31,34 @@ url: "https://www2.naomimakkelie.nl" # the base hostname & protocol for your sit
 # Build settings
 theme: minima
 plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
   - jekyll-feed
-  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-admin
+  - jekyll-archives
+  - jekyll-figure
+#  - artist_generator
 
 menu_items:
   - name: Work
+
+jekyll_admin:
+  hidden_links: []
+    #- posts
+    #- pages
+    #- staticfiles
+    #- datafiles
+    #- configuration
+  homepage: "pages"
+
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
 
 defaults:
   - scope:
@@ -53,7 +76,7 @@ defaults:
         日本は現在、これを防ぐためにできる限りのことを行っており、
         すでにその地域のすべてのサメを殺しています’
         
-        (Japan has discovered a new disease in sharks,
+        (Japan! has discovered a new disease in sharks,
         a mutation of SARS and COVID, which could potentially infect humans as well.
         Japan is now doing everything it can to prevent this,
         and already kill all sharks in the area)
@@ -67,6 +90,22 @@ defaults:
         - pastel chalk
         - paper
       year: 2022
+
+# Other
+highlighter: none
+markdown: kramdown
+kramdown:
+   syntax_highlighter_opts:
+      disable : true
+
+
+lazyimages: "enabled"
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock, vendor, sweep.yaml, vercel.json]
 
 # Exclude from processing.
 # The following items will not be processed, by default.

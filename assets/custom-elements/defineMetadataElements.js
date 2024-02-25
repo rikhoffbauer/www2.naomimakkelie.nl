@@ -1,0 +1,10 @@
+ createMetadataElement('nm-name');
+    createMetadataElement('nm-image-url');
+    createMetadataElement('nm-alt-text');
+    createMetadataElement('nm-description');
+    createMetadataElement('nm-width');
+    createMetadataElement('nm-height');
+    createMetadataElement('nm-art-medium');
+    createMetadataElement('nm-date-created');
+    createMetadataElement('nm-creator');
+    createMetadataElement('nm-artwork-surface');
