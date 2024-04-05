@@ -54,3 +54,41 @@ order: 1
   }
   </script>
 </figure>
+<figure itemscope="" itemtype="https://schema.org/Painting">
+  <img src="https://github.com/naomimakkelie-nl/www2.naomimakkelie.nl/assets/62353999/6fa68935-c065-42ce-9b55-ffffdf84e416" alt="Battlefield on Valentine’s Day" itemprop="image">
+
+  <figcaption>
+    <pre itemprop="description" style="white-space: pre-line;">
+        Battlefield on Valentine’s Day
+
+        70cm x 50cm, watercolour, ink and pastelchalk on paper, 2022
+    </pre>
+
+    <meta itemprop="width" content="70cm">
+    <meta itemprop="height" content="50cm">
+    <meta itemprop="artMedium" content="Watercolour, ink and pastelchalk">
+    <meta itemprop="dateCreated" content="2022">
+    <meta itemprop="creator" content="Naomi Mitsuko Makkelie">
+    <meta itemprop="artworkSurface" content="Paper">
+    <meta itemprop="name" content="Battlefield on Valentine’s Day">
+  </figcaption>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Painting",
+    "name": "Battlefield on Valentine’s Day",
+    "description": "Battlefield on Valentine’s Day",
+    "width": "70cm",
+    "height": "50cm",
+    "artMedium": "Watercolour, ink and pastelchalk on paper",
+    "dateCreated": "2022",
+    "creator": {
+      "@type": "Person",
+      "name": "Naomi Mitsuko Makkelie"
+    },
+    "artworkSurface": "Paper",
+    "image": "https://github.com/naomimakkelie-nl/www2.naomimakkelie.nl/assets/62353999/6fa68935-c065-42ce-9b55-ffffdf84e416"
+  }
+  </script>
+</figure>
